@@ -1,15 +1,16 @@
 package main.java.vehicles.cars;
 
-import main.java.vehicles.components.carComponents.EngineImpl;
+import main.java.vehicles.components.vehicleComponents.EngineImpl;
 
 public class LuxuryCar extends Car {
 
-    private String noofseats;
+    private final VehicleType type = VehicleType.SEDAN;
+    private String offsets;
 
     public String toString() {
         final String string = getString();
         return string +
-                ", noOfSeats=" + noofseats +
+                ", noOfSeats=" + offsets +
                 ", engine='" + EngineImpl.engine + '\'' +
                 '}';
     }
@@ -24,7 +25,7 @@ public class LuxuryCar extends Car {
                      int seatHeight, String engine, boolean panoramicSunroof) {
         super(maxSpeed, currentSpeed, seatHeight, engine);
         EngineImpl.turbo = panoramicSunroof;
-        this.noofseats = noOfSeats;
+        this.offsets = noOfSeats;
     }
 
     public boolean isPanoramicSunroof() {
@@ -36,11 +37,11 @@ public class LuxuryCar extends Car {
         this.getSpeed().setCurrentSpeed(this.getSpeed().getCurrentSpeed() * 2);
     }
 
-    public String getNoofseats() {
-        return noofseats;
+    public String getOffsets() {
+        return offsets;
     }
 
     public void setNoofseats(String noofseats, double notimportant1) {
-        this.noofseats = noofseats;
+        this.offsets = noofseats;
     }
 }

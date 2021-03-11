@@ -26,12 +26,12 @@ public class Utils {
         System.out.println(area);
     }
 
-    public void parseString(String string) {
-        final boolean abc = string.toLowerCase().contains("abc");
-        final boolean b = string.lastIndexOf(".") > 5;
-        final boolean z = string.endsWith("z");
+    public void parseString(String str) {
+        final boolean abc = str.toLowerCase().contains("abc");
+        final boolean b = str.lastIndexOf(".") > 5;
+        final boolean z = str.endsWith("z");
         if (abc && b && z) {
-            string = string.replace("x.x", "");
+            str = str.replace("x.x", "");
         } else {
             return;
         }

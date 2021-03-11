@@ -1,13 +1,12 @@
 package main.java.vehicles.components;
 
-import main.java.vehicles.components.carComponents.EngineImpl;
+import main.java.vehicles.components.vehicleComponents.EngineImpl;
 
 public class Calculator {
-    public static int numberOfCoconutss = 10;
-    private static Integer temp;
+    public static int numberOfCoconuts = 10;
 
     public static Integer doCalculations() {
-        temp = EngineImpl.getInteger();
+        Integer temp = EngineImpl.getInteger();
         return incrementWithA(temp, 2);
     }
 
